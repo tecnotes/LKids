@@ -1,0 +1,9 @@
+C:\_project\LKids\LKids\bin\Debug\LKids.exe
+C:\_project\LKids\LKids\bin\Debug\LKids.pdb
+C:\_project\LKids\LKids\bin\Debug\LKids.xml
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.Form1.resources
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.Resources.resources
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.vbproj.GenerateResource.Cache
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.exe
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.xml
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.pdb

@@ -22,17 +22,30 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me._debug_CloseBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        '_debug_CloseBtn
+        '
+        Me._debug_CloseBtn.Location = New System.Drawing.Point(13, 13)
+        Me._debug_CloseBtn.Name = "_debug_CloseBtn"
+        Me._debug_CloseBtn.Size = New System.Drawing.Size(75, 23)
+        Me._debug_CloseBtn.TabIndex = 0
+        Me._debug_CloseBtn.Text = "Close"
+        Me._debug_CloseBtn.UseVisualStyleBackColor = True
+        Me._debug_CloseBtn.Visible = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me._debug_CloseBtn)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents _debug_CloseBtn As System.Windows.Forms.Button
 
 End Class
