@@ -12,11 +12,15 @@ Public Class Form1
         End Get
     End Property
 
+    Dim Min As Integer = 1 ' Min for Math Section
+    Dim Max As Integer = 9 ' Max for Math Section
+    Dim FirstDigit, SecondDigit, Result, Count_Tasks As Integer ' Digit Var for Math Section
+    Dim AppVisible As Boolean ' Application Visible Var
     Dim _debug_State As Boolean ' Dim Debug var
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Debug 
-        _debug_State = True ' Set Debug State
+        _debug_State = True ' Set Debug State. Change to True if you need to Enable Debug Controls
         If _debug_State = True Then
             _debug_CloseBtn.Visible = True
         End If
@@ -26,6 +30,68 @@ Public Class Form1
         Me.Location = New Point(0, 0)
         Me.Size = SystemInformation.PrimaryMonitorSize
 
+    End Sub
+
+    Private Sub _task_Select()
+
+        'Math 
+        Dim _task_number As New Random()
+        Dim _task As Integer
+
+        _task = _task_number.Next(1, 4 + 1)
+
+        If _task = 1 Then
+            math_multiplication() 'Умножение
+        ElseIf _task = 2 Then
+            math_addition() 'Сложение
+        ElseIf _task = 3 Then
+            math_divide() 'Деление
+        ElseIf _task = 4 Then
+            math_subtraction() 'Вычитание 
+        End If
+    End Sub
+
+    Public Sub math_multiplication()
+        Dim Generator As New System.Random()
+        FirstDigit = Generator.Next(Min, Max + 1)
+        SecondDigit = Generator.Next(Min, Max + 1)
+        Result = FirstDigit * SecondDigit
+        _math_equation.Text = FirstDigit & " X " & SecondDigit & " = "
+        _debug_Result.Text = Result
+    End Sub
+
+    Public Sub math_addition()
+        Dim Generator As New System.Random()
+        FirstDigit = Generator.Next(1, 98 + 1) ' Limited by two-digit number
+        SecondDigit = Generator.Next(1, 98 + 1) ' Limited by two_digit number
+        Result = FirstDigit + SecondDigit
+        _math_equation.Text = FirstDigit & " + " & SecondDigit & " = "
+        _debug_Result.Text = Result
+    End Sub
+
+    Public Sub math_divide()
+        Dim Generator As New System.Random()
+        Dim Result_divide As Integer
+        FirstDigit = Generator.Next(Min, Max + 1)
+        SecondDigit = Generator.Next(Min, Max + 1)
+        Result_divide = FirstDigit * SecondDigit
+        Result = FirstDigit
+        _math_equation.Text = Result_divide & " : " & SecondDigit & " = "
+        _debug_Result.Text = Result
+    End Sub
+
+    Public Sub math_subtraction()
+        Dim Generator As New System.Random()
+        FirstDigit = Generator.Next(1, 98 + 1) ' Limited by two-digit number
+        SecondDigit = Generator.Next(1, 98 + 1) ' Limited by two-digit number
+        If FirstDigit > SecondDigit Then
+            Result = FirstDigit - SecondDigit
+            _math_equation.Text = FirstDigit & " - " & SecondDigit & " = "
+        Else
+            Result = SecondDigit - FirstDigit
+            _math_equation.Text = SecondDigit & " - " & FirstDigit & " = "
+        End If
+        _debug_Result.Text = Result
     End Sub
 
     Private Sub _debug_CloseBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _debug_CloseBtn.Click

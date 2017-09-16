@@ -23,6 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me._debug_CloseBtn = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me._math_equation = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me._checkout_Btn = New System.Windows.Forms.Button()
+        Me._debug_Result = New System.Windows.Forms.Label()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         '_debug_CloseBtn
@@ -35,17 +41,71 @@ Partial Class Form1
         Me._debug_CloseBtn.UseVisualStyleBackColor = True
         Me._debug_CloseBtn.Visible = False
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me._checkout_Btn)
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me._math_equation)
+        Me.Panel1.Location = New System.Drawing.Point(219, 376)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(500, 109)
+        Me.Panel1.TabIndex = 1
+        '
+        '_math_equation
+        '
+        Me._math_equation.AutoSize = True
+        Me._math_equation.Location = New System.Drawing.Point(84, 41)
+        Me._math_equation.Name = "_math_equation"
+        Me._math_equation.Size = New System.Drawing.Size(83, 13)
+        Me._math_equation.TabIndex = 0
+        Me._math_equation.Text = "_math_equation"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(218, 40)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(75, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        '_checkout_Btn
+        '
+        Me._checkout_Btn.Location = New System.Drawing.Point(320, 39)
+        Me._checkout_Btn.Name = "_checkout_Btn"
+        Me._checkout_Btn.Size = New System.Drawing.Size(75, 23)
+        Me._checkout_Btn.TabIndex = 2
+        Me._checkout_Btn.Text = "Checkout!"
+        Me._checkout_Btn.UseVisualStyleBackColor = True
+        '
+        '_debug_Result
+        '
+        Me._debug_Result.AutoSize = True
+        Me._debug_Result.Location = New System.Drawing.Point(108, 18)
+        Me._debug_Result.Name = "_debug_Result"
+        Me._debug_Result.Size = New System.Drawing.Size(79, 13)
+        Me._debug_Result.TabIndex = 2
+        Me._debug_Result.Text = "_debug_Result"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.ClientSize = New System.Drawing.Size(940, 518)
+        Me.Controls.Add(Me._debug_Result)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me._debug_CloseBtn)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents _debug_CloseBtn As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents _checkout_Btn As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents _math_equation As System.Windows.Forms.Label
+    Friend WithEvents _debug_Result As System.Windows.Forms.Label
 
 End Class
