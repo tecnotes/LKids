@@ -23,6 +23,7 @@ Public Class Form1
         _debug_State = True ' Set Debug State. Change to True if you need to Enable Debug Controls
         If _debug_State = True Then
             _debug_CloseBtn.Visible = True
+            _debug_Result.Visible = True
         End If
 
         ' Set Form Fullscreen
