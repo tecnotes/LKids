@@ -25,7 +25,7 @@ Partial Class Form1
         Me._debug_CloseBtn = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me._math_equation = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me._mathResult_TxtBox = New System.Windows.Forms.TextBox()
         Me._checkout_Btn = New System.Windows.Forms.Button()
         Me._debug_Result = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.Controls.Add(Me._checkout_Btn)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me._mathResult_TxtBox)
         Me.Panel1.Controls.Add(Me._math_equation)
         Me.Panel1.Location = New System.Drawing.Point(219, 376)
         Me.Panel1.Name = "Panel1"
@@ -60,12 +60,12 @@ Partial Class Form1
         Me._math_equation.TabIndex = 0
         Me._math_equation.Text = "_math_equation"
         '
-        'TextBox1
+        '_mathResult_TxtBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(218, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(75, 20)
-        Me.TextBox1.TabIndex = 1
+        Me._mathResult_TxtBox.Location = New System.Drawing.Point(218, 40)
+        Me._mathResult_TxtBox.Name = "_mathResult_TxtBox"
+        Me._mathResult_TxtBox.Size = New System.Drawing.Size(75, 20)
+        Me._mathResult_TxtBox.TabIndex = 1
         '
         '_checkout_Btn
         '
@@ -104,7 +104,7 @@ Partial Class Form1
     Friend WithEvents _debug_CloseBtn As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents _checkout_Btn As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents _mathResult_TxtBox As System.Windows.Forms.TextBox
     Friend WithEvents _math_equation As System.Windows.Forms.Label
     Friend WithEvents _debug_Result As System.Windows.Forms.Label
 

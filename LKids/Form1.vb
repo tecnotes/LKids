@@ -30,6 +30,9 @@ Public Class Form1
         Me.Location = New Point(0, 0)
         Me.Size = SystemInformation.PrimaryMonitorSize
 
+        ' Task Selection
+        _task_Select()
+
     End Sub
 
     Private Sub _task_Select()
@@ -41,13 +44,13 @@ Public Class Form1
         _task = _task_number.Next(1, 4 + 1)
 
         If _task = 1 Then
-            math_multiplication() 'Умножение
+            math_multiplication() ' Умножение
         ElseIf _task = 2 Then
-            math_addition() 'Сложение
+            math_addition() ' Сложение
         ElseIf _task = 3 Then
-            math_divide() 'Деление
+            math_divide() ' Деление
         ElseIf _task = 4 Then
-            math_subtraction() 'Вычитание 
+            math_subtraction() ' Вычитание 
         End If
     End Sub
 
@@ -96,5 +99,26 @@ Public Class Form1
 
     Private Sub _debug_CloseBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _debug_CloseBtn.Click
         Me.Close()
+    End Sub
+
+    Private Sub _checkout_Btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _checkout_Btn.Click
+        If _mathResult_TxtBox.Text = "" Then
+            MsgBox("The answer can not be empty!")
+        Else
+            If _mathResult_TxtBox.Text <> Result Then
+                MsgBox("Wrong Answer! Try Again!")
+                _mathResult_TxtBox.Text = ""
+            Else
+                Me.Visible = False
+                AppVisible = False
+                _mathResult_TxtBox.Text = ""
+                Threading.Thread.Sleep(600000) ' 10 minutes sleep
+                'Threading.Thread.Sleep(1000) ' test
+
+                Me.Visible = True
+                AppVisible = True
+                _task_Select()
+            End If
+        End If
     End Sub
 End Class
