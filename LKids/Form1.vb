@@ -31,6 +31,9 @@ Public Class Form1
         Me.Location = New Point(0, 0)
         Me.Size = SystemInformation.PrimaryMonitorSize
 
+        ' Set Form Background
+        Me.BackgroundImage = Image.FromFile("img/background2.png")
+
         ' Task Selection
         _task_Select()
 

@@ -46,21 +46,20 @@ Partial Class Form1
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me._checkout_Btn)
         Me.Panel1.Controls.Add(Me._mathResult_TxtBox)
         Me.Panel1.Controls.Add(Me._math_equation)
-        Me.Panel1.Location = New System.Drawing.Point(44, 376)
+        Me.Panel1.Location = New System.Drawing.Point(316, 387)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(884, 109)
+        Me.Panel1.Size = New System.Drawing.Size(325, 109)
         Me.Panel1.TabIndex = 1
         '
         '_math_equation
         '
-        Me._math_equation.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me._math_equation.Anchor = System.Windows.Forms.AnchorStyles.None
         Me._math_equation.AutoSize = True
-        Me._math_equation.Location = New System.Drawing.Point(307, 46)
+        Me._math_equation.Location = New System.Drawing.Point(23, 46)
         Me._math_equation.Name = "_math_equation"
         Me._math_equation.Size = New System.Drawing.Size(83, 13)
         Me._math_equation.TabIndex = 0
@@ -68,18 +67,16 @@ Partial Class Form1
         '
         '_mathResult_TxtBox
         '
-        Me._mathResult_TxtBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me._mathResult_TxtBox.Location = New System.Drawing.Point(510, 43)
+        Me._mathResult_TxtBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me._mathResult_TxtBox.Location = New System.Drawing.Point(91, 43)
         Me._mathResult_TxtBox.Name = "_mathResult_TxtBox"
         Me._mathResult_TxtBox.Size = New System.Drawing.Size(47, 20)
         Me._mathResult_TxtBox.TabIndex = 1
         '
         '_checkout_Btn
         '
-        Me._checkout_Btn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me._checkout_Btn.Location = New System.Drawing.Point(578, 40)
+        Me._checkout_Btn.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me._checkout_Btn.Location = New System.Drawing.Point(144, 41)
         Me._checkout_Btn.Name = "_checkout_Btn"
         Me._checkout_Btn.Size = New System.Drawing.Size(75, 23)
         Me._checkout_Btn.TabIndex = 2
@@ -100,12 +97,13 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(940, 518)
         Me.Controls.Add(Me._debug_Result)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me._debug_CloseBtn)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "LKids"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
