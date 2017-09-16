@@ -1,4 +1,5 @@
 ﻿Imports System.Random
+Imports System.IO
 
 Public Class Form1
 
@@ -32,7 +33,7 @@ Public Class Form1
         Me.Size = SystemInformation.PrimaryMonitorSize
 
         ' Set Form Background
-        Me.BackgroundImage = Image.FromFile("img/background2.png")
+        SetFormBackground()
 
         ' Task Selection
         _task_Select()
@@ -101,6 +102,11 @@ Public Class Form1
         _debug_Result.Text = Result
     End Sub
 
+    Private Sub SetFormBackground()
+        Dim _imageName As String = GetRandomImageFilePath("img")
+        Me.BackgroundImage = Image.FromFile(_imageName)
+    End Sub
+
     Private Sub _debug_CloseBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _debug_CloseBtn.Click
         Me.Close()
     End Sub
@@ -125,4 +131,11 @@ Public Class Form1
             End If
         End If
     End Sub
+
+    Public Function GetRandomImageFilePath(ByVal folderPath As String) As String
+        Dim files() As String = Directory.GetFiles(folderPath, "*.png")
+        Dim random As Random = New Random()
+        Return files(random.Next(0, files.Length - 1))
+    End Function
+
 End Class
