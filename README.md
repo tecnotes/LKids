@@ -12,7 +12,7 @@ Why i'm using Visual Basic? Because my son is interested in software development
 To compile project you need VB2010 and above. 
 You can get latest binaries in Debug folder.
 
-In feature i'm plan to make C# version of this software 
+In future i'm plan to make C# version of this software 
 
 Background Images Information:
 
