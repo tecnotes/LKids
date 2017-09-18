@@ -7,6 +7,13 @@ Application opens in full screen mode and prevents simple way to close, for exam
 
 This application was developed especially for my son. He is 8 years old. And he is my beta-tester :) 
 
+Why i'm using Visual Basic? Because my son is interested in software development and it is simple for understanding.
+
+To compile project you need VB2010 and above. 
+You can get latest binaries in Debug folder.
+
+In feature i'm plan to make C# version of this software 
+
 Background Images Information:
 
 background1.png - https://openclipart.org/detail/176139/two-birds-background by Reedabadeeda (https://openclipart.org/user-detail/Reedabadeeda)
