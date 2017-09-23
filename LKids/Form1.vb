@@ -1,5 +1,6 @@
 ﻿Imports System.Random
 Imports System.IO
+Imports teHELPLib
 
 Public Class Form1
 
@@ -21,11 +22,20 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Debug 
-        _debug_State = True ' Set Debug State. Change to True if you need to Enable Debug Controls
-        If _debug_State = True Then
-            _debug_CloseBtn.Visible = True
-            _debug_Result.Visible = True
-        End If
+        Try
+            Dim _get_debug_State_FromINI As New teHELPLib.INIFile
+            Dim Result As String
+            Result = _get_debug_State_FromINI.GetValue("config.ini", "DEBUG")
+            If Result = "1" Then
+                _debug_State = True ' Set Debug State. Change to True if you need to Enable Debug Controls
+                If _debug_State = True Then
+                    _debug_CloseBtn.Visible = True
+                    _debug_Result.Visible = True
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
         ' Set Form Fullscreen
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None

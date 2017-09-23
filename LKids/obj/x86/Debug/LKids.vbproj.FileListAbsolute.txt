@@ -7,3 +7,7 @@ C:\_project\LKids\LKids\obj\x86\Debug\LKids.vbproj.GenerateResource.Cache
 C:\_project\LKids\LKids\obj\x86\Debug\LKids.exe
 C:\_project\LKids\LKids\obj\x86\Debug\LKids.xml
 C:\_project\LKids\LKids\obj\x86\Debug\LKids.pdb
+C:\_project\LKids\LKids\bin\Debug\teHELPLib.dll
+C:\_project\LKids\LKids\bin\Debug\teHELPLib.pdb
+C:\_project\LKids\LKids\bin\Debug\teHELPLib.xml
+C:\_project\LKids\LKids\obj\x86\Debug\LKids.vbprojResolveAssemblyReference.cache
